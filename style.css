@@ -1,0 +1,92 @@
+body {
+    background-color: #73c8a9;
+    font-family: 'Press Start 2P', cursive;
+    background-image: linear-gradient(to right, #73c8a9, #373b44);
+}
+
+canvas {
+    border: 5px solid #2e2e2e;
+    border-radius: 10px;
+    display: block;
+    margin: 50px auto;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-image: url('assets/Flappy_Bird_Background.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    /* we will make the end menu overlap the game canvas, so we need here a lower z-index */
+    z-index: 1;
+}
+
+.backdrop-blur {
+    filter: blur(5px);
+}
+
+#end-menu {
+    /* we will toggle then the display of the end-menu */
+    display: none;
+    margin: 50px auto;
+    width: 310px;
+    padding: 20px;
+    text-align: center;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    z-index: 1000;
+}
+
+#score-display {
+    color: #fff;
+    font-size: 2em;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+.scene {
+    width: 10em;
+    justify-content: center;
+    align-items: center;
+   }
+   
+   .cube {
+    padding-right: 150px;
+    color: #ccc;
+    cursor: pointer;
+    font-family: 'Roboto', sans-serif;
+    transition: all 0.85s cubic-bezier(.17,.67,.14,.93);
+    transform-style: preserve-3d;
+    transform-origin: 100% 50%;
+    width: 10em;
+    height: 4em;
+   }
+   
+   .cube:hover {
+    transform: rotateX(-90deg);
+   }
+   
+   .side {
+    box-sizing: border-box;
+    position: absolute;
+    display: inline-block;
+    height: 4em;
+    width: 10em;
+    text-align: center;
+    text-transform: uppercase;
+    padding-top: 1.5em;
+    font-weight: bold;
+   }
+   
+   .top {
+    background: wheat;
+    color: #222229;
+    transform: rotateX(90deg) translate3d(0, 0, 2em);
+    box-shadow: inset 0 0 0 5px #fff;
+   }
+   
+   .front {
+    background: #222229;
+    color: #fff;
+    box-shadow: inset 0 0 0 5px #fff;
+    transform: translate3d(0, 0, 2em);
+   }
